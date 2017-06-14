@@ -41,7 +41,7 @@
 #include "comm/expect.h"
 
 #define MAXARGS 32
-#define MAXLINE 256
+#define MAXLINE 16384
 
 static const char* sshpass_opts[] = {"-o", "PasswordAuthentication=yes",
                                      "-o", "StrictHostKeyChecking=no",
