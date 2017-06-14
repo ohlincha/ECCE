@@ -20,6 +20,6 @@ sed -i 's/wxLogGeneric(level, m)/wxLogGeneric(level, "%s", m.c_str())/g' _misc_w
 sed -i 's/wxLogTrace(mask, m)/wxLogTrace(mask, "%s", m.c_str())/g' _misc_wrap.cpp
 cd ${ECCE_HOME}/src
 grep -srl "<freetype/freetype.h>" |xargs -I {} sed -i 's,<freetype/freetype.h>,FT_FREETYPE_H,g' {}
-grep -srl "<ftoutln.h>" |xargs -I {} sed -i 's,<ftoutln.h>,<freetype/ftoutln.h>,g' {}
 grep -srl "freetype/" |xargs -I {} sed -i 's,freetype/,,g' {}
+grep -srl "<ftoutln.h>" |xargs -I {} sed -i 's,<ftoutln.h>,<freetype/ftoutln.h>,g' {}
 cd ${ECCE_HOME}/build
