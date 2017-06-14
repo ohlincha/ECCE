@@ -189,9 +189,9 @@ bool RCommand::expwrite(const char* command)
 {
   int comlen = strlen(command);
 
-  if (comlen >= 256) {
-    p_errMessage = "Exceeds maximum C shell command length of 256 characters";
-    return false;
+  if (comlen >= MAXLINE) {
+  	p_errMessage = "Exceeds maximum C shell command length of 16384 characters";
+  return false;
   }
 
   if (write(p_fid, command, comlen)==comlen && write(p_fid, "\n", 1)==1)
