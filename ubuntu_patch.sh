@@ -1,3 +1,4 @@
+#!/bin/bash
 cp ${ECCE_HOME}/build/3rdparty-dists/wxPython-src-2.8.12.1.tar.bz2 ${ECCE_HOME}/3rdparty/build/
 cd ${ECCE_HOME}/3rdparty/build/
 tar xvf wxPython-src-2.8.12.1.tar.bz2
