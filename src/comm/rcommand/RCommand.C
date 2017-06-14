@@ -245,9 +245,9 @@ bool RCommand::fidwrite(const int& fid, const string& command,
 {
   int comlen = command.length();
 
-  if (comlen >= 256) {
-    errMessage = "Exceeds maximum C shell command length of 256 characters";
-    return false;
+ if (comlen >= MAXLINE) {
+ 	errMessage = "Exceeds maximum C shell command length of 16384 characters";
+  return false;
   }
 
   if (write(fid, command.c_str(), comlen)==comlen && write(fid, "\n", 1)==1)
@@ -3959,6 +3959,7 @@ bool RCommand::shellput(const char** fromFiles, const string& toFile)
       // a 256 character limit for commands to C shell.  The STOP_XFER
       // write is not needed for the sysread/syswrite version because it
       // it reads based on the size of the file.
+	  // Update Anno 2017 -- the modern C shell limit is 64k
 
       //cmdstat = "perl -e 'open(TMP,\">" + fullToFile + "\");$n=" + nstr + ";$t=0;while ($t<$n){$i=sysread(STDIN,$s,$n-$t);$t=$t+$i;syswrite(TMP,$s,$i);}close(TMP);';echo CMDSTAT=$status";
 
