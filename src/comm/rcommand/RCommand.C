@@ -41,8 +41,7 @@
 #include "comm/expect.h"
 
 #define MAXARGS 32
-/*#define MAXLINE 256*/
-#define MAXLINE 16384
+#define MAXLINE 256
 
 static const char* sshpass_opts[] = {"-o", "PasswordAuthentication=yes",
                                      "-o", "StrictHostKeyChecking=no",
@@ -173,8 +172,8 @@ bool RCommand::expwrite(const string& command)
 {
   int comlen = command.length();
 
-  if (comlen >= MAXLINE) {
-    p_errMessage = "Exceeds maximum C shell command length of 16384 characters";
+  if (comlen >= 256) {
+    p_errMessage = "Exceeds maximum C shell command length of 256 characters";
     return false;
   }
 
@@ -190,8 +189,8 @@ bool RCommand::expwrite(const char* command)
 {
   int comlen = strlen(command);
 
-  if (comlen >= MAXLINE) {
-    p_errMessage = "Exceeds maximum C shell command length of 16384 characters";
+  if (comlen >= 256) {
+    p_errMessage = "Exceeds maximum C shell command length of 256 characters";
     return false;
   }
 
@@ -246,8 +245,8 @@ bool RCommand::fidwrite(const int& fid, const string& command,
 {
   int comlen = command.length();
 
-  if (comlen >= MAXLINE) {
-    errMessage = "Exceeds maximum C shell command length of 16384 characters";
+  if (comlen >= 256) {
+    errMessage = "Exceeds maximum C shell command length of 256 characters";
     return false;
   }
 
@@ -3960,9 +3959,6 @@ bool RCommand::shellput(const char** fromFiles, const string& toFile)
       // a 256 character limit for commands to C shell.  The STOP_XFER
       // write is not needed for the sysread/syswrite version because it
       // it reads based on the size of the file.
-
-	//16 June 2015 -- on modern systems the C shell limit seems to be 64k
-	//or higher
 
       //cmdstat = "perl -e 'open(TMP,\">" + fullToFile + "\");$n=" + nstr + ";$t=0;while ($t<$n){$i=sysread(STDIN,$s,$n-$t);$t=$t+$i;syswrite(TMP,$s,$i);}close(TMP);';echo CMDSTAT=$status";
 
