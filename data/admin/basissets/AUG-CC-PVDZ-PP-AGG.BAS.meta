@@ -1,3 +1,18 @@
+name
+aug-cc-pVDZ-PP
+name
+type
+ECPOrbital
+type
+category
+ORBITAL
+category
+spherical
+Y
+spherical
+contraction_type
+GC
+contraction_type
 references
 
 references
@@ -47,5 +62,4 @@ D. Figgen, G. Rauhut, M. Dolg, and H. Stoll, Chem. Phys. 311, 227 (2005).
 
 info
 comments
-
 comments

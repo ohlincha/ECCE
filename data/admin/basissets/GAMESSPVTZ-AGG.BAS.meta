@@ -1,3 +1,18 @@
+name
+GAMESS PVTZ
+name
+type
+other_segmented
+type
+category
+ORBITAL
+category
+spherical
+N
+spherical
+contraction_type
+Segmented
+contraction_type
 references
 
 references
@@ -17,5 +32,4 @@ AO and two functions for each inner shell AO.
 
 info
 comments
-
 comments

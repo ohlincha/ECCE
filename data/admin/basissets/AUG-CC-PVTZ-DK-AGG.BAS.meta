@@ -1,3 +1,18 @@
+name
+aug-cc-pVTZ-DK
+name
+type
+correlation_consistent
+type
+category
+ORBITAL
+category
+spherical
+Y
+spherical
+contraction_type
+GC
+contraction_type
 references
 
 references
@@ -15,5 +30,4 @@ sets.  Therefore, they may have to be recontracted for use in Gaussian03.
 
 info
 comments
-
 comments

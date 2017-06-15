@@ -1,3 +1,18 @@
+name
+cc-pVQZ(seg-opt)
+name
+type
+other_segmented
+type
+category
+ORBITAL
+category
+spherical
+Y
+spherical
+contraction_type
+Segmented
+contraction_type
 references
 Elements                             References
 --------                             ----------
@@ -15,5 +30,4 @@ info
 
 info
 comments
-
 comments

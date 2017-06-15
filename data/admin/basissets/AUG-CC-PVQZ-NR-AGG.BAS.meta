@@ -1,3 +1,18 @@
+name
+aug-cc-pVQZ-NR
+name
+type
+correlation_consistent
+type
+category
+ORBITAL
+category
+spherical
+Y
+spherical
+contraction_type
+GC
+contraction_type
 references
 
 references
@@ -67,5 +82,4 @@ Note: these calculations correlated the outermost 3d4s valence electrons only.
 
 info
 comments
-
 comments

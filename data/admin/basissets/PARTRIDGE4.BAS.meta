@@ -1,3 +1,18 @@
+name
+Partridge Uncontr. 4
+name
+type
+other_segmented
+type
+category
+ORBITAL
+category
+spherical
+Y
+spherical
+contraction_type
+Uncontracted
+contraction_type
 references
 Elements                             References
 --------                             ----------
@@ -14,5 +29,4 @@ These are groundstate, RHF energy-optimized, uncontracted basis sets.
 
 info
 comments
-
 comments
